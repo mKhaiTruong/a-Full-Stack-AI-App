@@ -5,7 +5,7 @@ import Button from "~/components/ui/Button";
 import Upload from "~/components/Upload";
 import { useNavigate } from "react-router";
 
-export function meta({}: Route.MetaArgs) {
+export function meta(_: Route.MetaArgs) {
   return [{ title: "New React Router App" }, { name: "description", content: "Welcome to React Router!" }];
 }
 
