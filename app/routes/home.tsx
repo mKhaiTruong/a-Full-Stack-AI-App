@@ -10,8 +10,6 @@ import { createProject } from "lib/puter.action";
 export function meta(_args: Route.MetaArgs) {
   return [{ title: "New React Router App" }, { name: "description", content: "Welcome to React Router!" }];
 }
-  return [{ title: "New React Router App" }, { name: "description", content: "Welcome to React Router!" }];
-}
 
 export default function Home() {
   const navigate = useNavigate();
@@ -106,7 +104,7 @@ export default function Home() {
 
           <div className="projects-grid">
             {projects.map(({ id, name, renderedImage, sourceImage, timestamp }) => (
-              <div className="project-card group">
+              <div key={id} className="project-card group">
                 <div className="preview">
                   <img src={renderedImage || sourceImage} alt="Project" />
                   <div className="badge">Community</div>
